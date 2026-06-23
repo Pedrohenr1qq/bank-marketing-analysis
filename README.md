@@ -28,11 +28,11 @@ python main.py
 
 ## 📊 Pipeline de Processamento
 
-1. **Carregamento**: Lê 4.521 amostras com 17 features
+1. **Carregamento**: Lê 45.211 amostras com 17 features (dataset completo)
 2. **Preprocessamento**: Normaliza dados numéricos e codifica categóricos
-3. **Balanceamento**: NearMiss V3 reduz para 1.042 amostras balanceadas
-4. **Divisão**: 80% treino, 20% teste
-5. **Validação**: K-Fold com 5 splits (F1: 75.09%)
+3. **Balanceamento**: NearMiss V3 reduz para 10.578 amostras balanceadas
+4. **Divisão**: 80% treino (8.462), 20% teste (2.116)
+5. **Validação**: K-Fold com 5 splits (F1: 74.21%)
 6. **Treinamento**: Random Forest com 100 árvores
 7. **Avaliação**: Métricas completas e feature importance
 
@@ -40,10 +40,10 @@ python main.py
 
 | Métrica | Valor |
 |---------|-------|
-| Acurácia | 75.60% |
-| Precisão | 75.71% |
-| Recall | 75.58% |
-| F1-Score | 75.56% |
+| Acurácia | 74.86% |
+| Precisão | 74.97% |
+| Recall | 74.86% |
+| F1-Score | 74.83% |
 
 **Top 3 Features mais importantes:**
 - Feature_11 (duration) - 21.57%

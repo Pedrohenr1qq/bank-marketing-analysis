@@ -24,7 +24,7 @@ def main():
 
     # Carregar dados
     loader = DataLoader(delimiter=';')
-    data, header = loader.load('dataset/bank.csv')
+    data, header = loader.load('dataset/bank-full.csv')
     print(f"Dados carregados: {data.shape[0]} amostras, {data.shape[1]} features")
     print(f"Features: {header}\n")
 
@@ -99,7 +99,7 @@ def main():
     print("6. IMPORTÂNCIA DAS FEATURES")
     print("=" * 60)
     feature_importance = model.feature_importances_
-    feature_names = [f"Feature_{i}" for i in range(len(header) - 1)]
+    feature_names = header[:-1]
 
     sorted_idx = np.argsort(feature_importance)[-10:]
     print(f"Top 10 features mais importantes:")
